@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>basalt</name>
+  <version>1.0.0</version>
+  <description>wrapper package for basalt VIO</description>
+
+  <maintainer email="bernd.pfrommer@gmail.com">Bernd Pfrommer</maintainer>
+  <license>Apache-2</license>
+
+  <buildtool_depend>cmake</buildtool_depend>
+  <export>
+    <build_type>cmake</build_type>
+  </export>
+</package>

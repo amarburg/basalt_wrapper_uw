@@ -1,0 +1,5 @@
+repositories:
+  src/basalt_wrapper/basalt:
+    type: git
+    url: https://github.com/berndpfrommer/basalt.git
+    version: cmake_export_libraries
