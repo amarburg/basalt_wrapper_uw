@@ -6,9 +6,22 @@ a CMakeLists.txt file such that it builds with ROS tools (catkin / ament). It
 also sets some cmake options for the Basalt package to export
 correctly.
 
+This package is a dependency of the [Basalt
+ROS](https://github.com/berndpfrommer/basalt_ros) package.
+
+## Platforms
+
+Should be working on Ubuntu 20.04 and 22.04. Not tested for older systems.
+
 ## How to build
 
-Create a workspace (e.g. ~/ws), clone this repo and fetch:
+Install vcstool and bzip2-dev:
+```
+sudo apt install python3-vcstool libbz2-dev
+```
+
+Create a workspace (e.g. ~/ws), clone this repo and fetch.
+The ``vcs import`` will run a long while.
 ```
 mkdir -p ~/ws/src
 cd ~ws
@@ -17,7 +30,7 @@ vcs import --recursive < src/basalt_wrapper/basalt_wrapper.repos
 ```
 Build:
 ```
-colcon --DCMAKE_BUILD_TYPE=RelWithDebInfo
+colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=RelWithDebInfo
 ```
 
 ## License
