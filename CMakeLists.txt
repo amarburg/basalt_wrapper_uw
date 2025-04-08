@@ -4,6 +4,7 @@ project(basalt_wrapper)
 
 # sophus and cereal must be installed or else the generation
 # of the basalt-headerTargets.cmake fails
+add_compile_options(-Wno-class-memaccess)
 
 set(SOPHUS_INSTALL ON CACHE BOOL "install sophus")
 set(CEREAL_INSTALL ON CACHE BOOL "install cereal")
